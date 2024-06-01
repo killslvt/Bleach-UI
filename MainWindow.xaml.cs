@@ -17,7 +17,7 @@ namespace Cross
         {
             InitializeComponent();
             CreateFolder("Bleach/Scripts");
-            Load();
+            LoadTextEditor();
         }
 
         public void CreateFolder(string folderName)
@@ -32,9 +32,10 @@ namespace Cross
             }
         }
 
-        private void Load()
+        public string TextEditorTXT = "--[[ \r\n\tWelcome To Bleach Beta Made By ilycross\r\n\tDiscord: discord.gg/term disocrd.gg/vexhub\r\n--]]";
+        private void LoadTextEditor()
         {
-            textEditor.Text = "--[[ \r\n\tWelcome To Bleach Beta Made By ilycross\r\n\tDiscord: discord.gg/term disocrd.gg/vexhub\r\n--]]";
+            textEditor.Text = TextEditorTXT;
         }
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
