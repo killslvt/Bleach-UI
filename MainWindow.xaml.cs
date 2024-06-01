@@ -13,8 +13,6 @@ namespace Cross
 
     public partial class MainWindow : Window
     {
-        private string folderPath = "Bleach/Scripts";
-
         public MainWindow()
         {
             InitializeComponent();
