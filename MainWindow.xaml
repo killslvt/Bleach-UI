@@ -1,0 +1,46 @@
+﻿<Window x:Class="Cross.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:local="clr-namespace:Cross"
+        mc:Ignorable="d"
+        Title="NightGun" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" Height="425" Width="800">
+    <Border Background="#151515" CornerRadius="10,10,10,10" 
+            BorderThickness="2px"  BorderBrush="Black" Name="Border" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid Name="Holder">
+            <TextBlock FontWeight="Medium" FontSize="16pt" Foreground="#FF848484" Margin="10,7,639,384" Text="Bleach [BETA]"/>
+
+            <Button x:Name="Close" Content="&#xEF2C;" FontFamily="Segoe MDL2 Assets" Foreground="Red" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}"  Margin="751,3,5,378" Click="Button_Click" Width="40" Height="40" BorderBrush="#FF3C3C3C">
+            </Button>
+            <Button x:Name="Mini" Content="&#xEF2D;" FontFamily="Segoe MDL2 Assets" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}"  Margin="706,3,50,378" Click="Button_Click_1" Width="40" Height="40" BorderBrush="#FF202020">
+            </Button>
+            <Border Margin="125,45,0,50">
+                <Grid>
+                    <avalonEdit:TextEditor xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                        Name="textEditor"
+                        SyntaxHighlighting="C#"
+                        FontFamily="Consolas"
+                        FontSize="10pt" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Background="#FF191919" LineNumbersForeground="White" Foreground="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" ShowLineNumbers="True">
+                        <avalonEdit:TextEditor.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10,10,10,10"></Setter>
+                            </Style>
+                        </avalonEdit:TextEditor.Resources>
+                    </avalonEdit:TextEditor>
+                </Grid>
+            </Border>
+            <Border CornerRadius="10,10,10,10"  BorderBrush="#202020" BorderThickness="1" Margin="0,45,675,50">
+                <ListBox Name="FilesListBox" Background="Transparent" BorderThickness="0" Height="326" VerticalAlignment="Center" Margin="0,0,-1,0" SelectionChanged="FilesListBox_SelectionChanged" Foreground="White"/>
+            </Border>
+            <Button Content="&#xEDB5;" FontFamily="Segoe MDL2 Assets" Click="Button_Inject" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource RoundedButtonStyle}" Margin="708,377,50,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xED61;" FontFamily="Segoe MDL2 Assets" Click="Button_Clear" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}" Margin="5,377,751,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xE8C8;" FontFamily="Segoe MDL2 Assets" Click="Button_LoadScript" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}" HorizontalAlignment="Left" Width="40" Margin="50,377,0,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xE792;" FontFamily="Segoe MDL2 Assets" Click="Button_Save" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}" HorizontalAlignment="Left" Width="40" Margin="95,377,0,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xE704;" FontFamily="Segoe MDL2 Assets" Click="Button_Execute" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey= RoundedButtonStyle}" Margin="753,377,5,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xE72C;" FontFamily="Segoe MDL2 Assets" Click="Button_Reload" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey=RoundedButtonStyle}" HorizontalAlignment="Left" Width="40" Margin="140,377,0,4" Height="40" BorderBrush="#FF202020"/>
+            <Button Content="&#xEA39;" FontFamily="Segoe MDL2 Assets" Click="Button_Kill" Foreground="White" Background="#202020" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" Style="{DynamicResource ResourceKey=RoundedButtonStyle}" HorizontalAlignment="Left" Width="40" Margin="185,377,0,4" Height="40" BorderBrush="#FF202020"/>
+        </Grid>
+    </Border>
+</Window>
